@@ -42,7 +42,7 @@ class BlogPost
      */
     private $draft = false;
 
-
+    private $category;
     /**
      * Get id
      *
@@ -113,6 +113,16 @@ class BlogPost
         $this->draft = $draft;
 
         return $this;
+    }
+    
+    public function setCategory(Category $category)
+    {
+        $this->category = $category;
+    }
+
+    public function getCategory()
+    {
+        return $this->category;
     }
 
     /**
